@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lifeofmorr.github.io/fort-lauderdale-outdoor-lighting/sitemap.xml
