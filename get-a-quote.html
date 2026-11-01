@@ -13,22 +13,34 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cinematic.css">
 </head>
-<body>
-<header><div class="wrap nav">
-<a class="logo" href="index.html">Fort Lauderdale <span>Outdoor Lighting</span></a>
-<nav class="nav-links">
+<body class="cine">
+<header class="cine-nav"><div class="cine-nav-in">
+<a class="cine-logo" href="index.html">Fort Lauderdale <span>Outdoor Lighting</span></a>
+<nav aria-label="Main">
 <a href="permanent-roofline-lighting.html">Permanent Roofline</a>
 <a href="landscape-lighting.html">Landscape</a>
 <a href="holiday-lighting-installation.html">Holiday Installs</a>
-<a class="btn" href="get-a-quote.html">Get My Free Quote</a>
+<a class="cta" href="get-a-quote.html">Get My Free Quote</a>
 </nav></div></header>
 
-<section><div class="wrap">
+<div class="cine-hero" style="padding-bottom:70px"><div class="wrap">
 <p class="eyebrow">Free · No obligation</p>
-<h1 style="font-family:'Fraunces',serif;font-size:clamp(2rem,4.4vw,3rem);margin:12px 0 10px">Tell us about your home</h1>
-<p class="sub">Two minutes. A licensed local installer will reach out with your free design consult and quote — holiday-season requests are answered fastest while install dates remain.</p>
-<div class="form-shell"><iframe name="gf_sink" title="form sink" style="display:none" aria-hidden="true" onload="if(window.__gfSent){window.location.href='thanks.html'}"></iframe>
+<h1 style="font-size:clamp(2.6rem,6vw,4.4rem)">Tell us about your home</h1>
+<p class="lede">Two minutes. A licensed local installer will reach out with your free design consult and quote — holiday-season requests are answered fastest while install dates remain.</p>
+<div class="hero-cta"><a class="cine-btn ghost" href="index.html#estimator">Try the instant estimator first</a></div>
+</div></div>
+
+<section><div class="wrap">
+<!-- FORM VERIFICATION (2026-11-01): fields, options, order and required flags below were
+     cross-checked against the live Google Form viewform on 2026-11-01 and match exactly.
+     Entry IDs are the site's own pre-existing native-form IDs for this same form
+     (captured in snapshots/ftl-lighting-before.json) — an authoritative local source
+     per BATCH-PLAYBOOK §5, so this form is LIVE, not fail-closed. Do not rename
+     entry.* fields to entry.UNVERIFIED_* — that was the Lakeland pilot data loss.
+     Original embed reference: https://docs.google.com/forms/d/e/1FAIpQLScX-S-pJX0Y0AP7EfF7koSnfTdxtU6JDijojXEzifGnJthVJQ/viewform?embedded=true -->
+<div class="form-shell rv"><iframe name="gf_sink" title="form sink" style="display:none" aria-hidden="true" onload="if(window.__gfSent){window.location.href='thanks.html'}"></iframe>
 <form class="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScX-S-pJX0Y0AP7EfF7koSnfTdxtU6JDijojXEzifGnJthVJQ/formResponse" method="POST" target="gf_sink" onsubmit="window.__gfSent=true">
 <div class="gf-field"><label for="f839250320">Your name <span class="gf-star">*</span></label><input id="f839250320" name="entry.839250320" type="text" placeholder="Jane Smith" required></div>
 <div class="gf-field"><label for="f858650476">Phone <span class="gf-star">*</span></label><input id="f858650476" name="entry.858650476" type="tel" placeholder="(954) 555-0123" required></div>
@@ -42,7 +54,7 @@
 <p class="sub" style="margin-top:14px">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLScX-S-pJX0Y0AP7EfF7koSnfTdxtU6JDijojXEzifGnJthVJQ/viewform" target="_blank" rel="noopener">Open the quote form in a new tab</a>.</p>
 </div></section>
 
-<section><div class="wrap"><div class="cta-band">
+<section><div class="wrap"><div class="cta-band rv">
 <div><h2 style="margin-bottom:6px">Get the real number for your home.</h2><p style="color:var(--muted)">Free design consult and quote from a licensed local installer. No obligation.</p></div>
 <a class="btn" href="get-a-quote.html">Get My Free Quote</a>
 </div></div></section>
@@ -55,29 +67,29 @@
 <p class="disclosure">Fort Lauderdale Outdoor Lighting is a referral and marketing service that connects Broward County homeowners with independent, licensed outdoor lighting installers. We are not a lighting contractor and do not perform installations. Quotes are provided by the installer who contacts you; pricing ranges shown are typical market ranges, not a bid. Always verify an installer's Florida license and insurance before hiring.</p>
 <p style="margin-top:14px">© 2026 Fort Lauderdale Outdoor Lighting. All rights reserved.</p>
 </div></footer>
+<script src="cinematic.js"></script>
 <script>
-/* Cinematic reveal + card tilt — vanilla, progressive enhancement.
-   Elements are only hidden once JS runs; reduced-motion opts out. */
+/* Estimator / simulator handoff — prefill from ?need=, ?size= and ?summary=
+   (values must match exact options of entry.78162691 / entry.1728631559;
+   anything else is ignored). Summary lands in the "Anything else?" field. */
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var targets = document.querySelectorAll('section .wrap > *, .hero .wrap > *, footer .wrap > *, .card, .step, .cta-band');
-  if('IntersectionObserver' in window && !reduce){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
-    targets.forEach(function(el){ el.classList.add('rv'); io.observe(el); });
-  }
-  if(!reduce && window.matchMedia('(pointer: fine)').matches){
-    document.querySelectorAll('.card').forEach(function(card){
-      card.addEventListener('pointermove', function(ev){
-        var r = card.getBoundingClientRect();
-        var x = (ev.clientX - r.left) / r.width - .5;
-        var y = (ev.clientY - r.top) / r.height - .5;
-        card.style.transform = 'translateY(-7px) rotateX(' + (-y*4.5).toFixed(2) + 'deg) rotateY(' + (x*4.5).toFixed(2) + 'deg)';
-      });
-      card.addEventListener('pointerleave', function(){ card.style.transform = ''; });
-    });
-  }
+  try{
+    var q = new URLSearchParams(window.location.search);
+    function setSel(name, param){
+      var v = q.get(param); if(!v) return;
+      var sel = document.querySelector('select[name="' + name + '"]'); if(!sel) return;
+      for(var i=0;i<sel.options.length;i++){
+        if(sel.options[i].value === v){ sel.selectedIndex = i; break; }
+      }
+    }
+    setSel('entry.78162691', 'need');
+    setSel('entry.1728631559', 'size');
+    var s = q.get('summary');
+    if(s){
+      var ta = document.querySelector('textarea[name="entry.2055155254"]');
+      if(ta && !ta.value) ta.value = s.slice(0, 500);
+    }
+  }catch(e){}
 })();
 </script>
 </body>

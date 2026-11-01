@@ -297,3 +297,130 @@ footer .logo{display:inline-block}
 .gform-btn:hover{transform:translateY(-2px)}
 .gform-btn:active{transform:translateY(0)}
 @media (max-width:640px){.gform{grid-template-columns:1fr}}
+
+/* ============================================================
+   "See Your Home Lit" — Interactive Lighting Simulator
+   Additive section: night SVG scene + glass control panel.
+   ============================================================ */
+.sim-section{padding-top:clamp(64px,8vw,100px)}
+.sim-stage{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 50px 100px -30px rgba(0,0,0,.9),0 0 110px -34px rgba(242,179,61,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  background:#04060c;
+}
+.sim-svg{display:block;width:100%;height:auto;aspect-ratio:900/520}
+.sim-layer{transition:transform .45s var(--ease);will-change:transform}
+.sim-bulb-core,.sim-bulb-halo{transition:fill .45s var(--ease),opacity .5s var(--ease)}
+.sim-roof-halo,.sim-roof-core,.sim-uplights,.sim-windows-glow{transition:opacity .6s var(--ease)}
+.sim-twinkle .sim-bulb-core,.sim-twinkle .sim-bulb-halo{animation:simTwinkle 1.7s ease-in-out infinite alternate}
+@keyframes simTwinkle{from{opacity:.55}to{opacity:1}}
+.sim-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:34px 22px 14px;
+  font-size:.84rem;color:rgba(246,244,239,.72);text-align:center;
+  background:linear-gradient(180deg,transparent,rgba(4,6,12,.82));
+  pointer-events:none;
+}
+.sim-panel{
+  margin-top:22px;display:grid;grid-template-columns:1.25fr .95fr;gap:22px;align-items:stretch;
+  border-radius:var(--radius-lg);padding:30px;
+  background:linear-gradient(165deg,rgba(255,255,255,.07),rgba(255,255,255,.02) 55%,rgba(242,179,61,.05));
+  border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:var(--shadow-card),inset 0 1px 0 rgba(255,255,255,.09);
+}
+.sim-controls{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.sim-fieldset{border:0;padding:0;margin:0;min-width:0}
+.sim-fieldset legend{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;color:var(--paper);
+  padding:0;margin-bottom:14px;
+}
+.sim-switch{
+  position:relative;display:flex;align-items:center;gap:13px;min-height:44px;
+  cursor:pointer;margin-bottom:12px;font-size:.98rem;font-weight:600;color:var(--paper);
+}
+.sim-switch input{
+  position:absolute;opacity:0;width:44px;height:44px;margin:0;cursor:pointer;
+}
+.sim-track{
+  flex:none;width:52px;height:30px;border-radius:999px;position:relative;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  transition:background .35s var(--ease),border-color .35s,box-shadow .35s;
+}
+.sim-thumb{
+  position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;
+  background:#dfe3e8;transition:transform .35s var(--ease),background .35s;
+  box-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+.sim-switch input:checked ~ .sim-track{
+  background:linear-gradient(180deg,var(--amber2),var(--amber));
+  border-color:rgba(242,179,61,.6);box-shadow:0 0 18px -2px rgba(242,179,61,.55);
+}
+.sim-switch input:checked ~ .sim-track .sim-thumb{transform:translateX(22px);background:#fff8e8}
+.sim-switch input:focus-visible ~ .sim-track{outline:2px solid var(--amber);outline-offset:3px}
+.sim-switch input:disabled ~ .sim-track{opacity:.4}
+.sim-themes{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.sim-theme{
+  position:relative;display:inline-flex;align-items:center;gap:9px;min-height:44px;
+  padding:9px 15px 9px 11px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:rgba(255,255,255,.045);
+  font-size:.9rem;font-weight:600;color:var(--muted);
+  transition:border-color .3s,color .3s,background .3s,box-shadow .3s;
+}
+.sim-theme input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.sim-theme:has(input:checked){
+  border-color:rgba(242,179,61,.65);color:var(--paper);background:rgba(242,179,61,.09);
+  box-shadow:0 0 20px -6px rgba(242,179,61,.5);
+}
+.sim-theme:has(input:focus-visible){outline:2px solid var(--amber);outline-offset:3px}
+.sim-theme:has(input:disabled){opacity:.4;cursor:not-allowed}
+.sim-swatch{flex:none;width:20px;height:20px;border-radius:50%;box-shadow:0 0 10px 1px currentColor}
+.sim-swatch-warm{background:#ffe9bb;color:rgba(242,179,61,.8)}
+.sim-swatch-multi{background:conic-gradient(#ff5a4e,#ffd23e,#4ade80,#4db8ff,#c084fc,#ff5a4e);color:rgba(255,255,255,.35)}
+.sim-swatch-rg{background:linear-gradient(90deg,#ff4040 50%,#35d05a 50%);color:rgba(255,255,255,.3)}
+.sim-swatch-ice{background:#dff3ff;color:rgba(124,199,255,.85)}
+.sim-bright{margin-top:16px}
+.sim-bright label{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:.95rem;font-weight:600;color:var(--paper);margin-bottom:4px;
+}
+.sim-bright output{color:var(--amber2);font-family:'Fraunces',serif;font-size:1.05rem}
+.sim-bright input[type="range"]{
+  width:100%;min-height:44px;margin:0;padding:0;background:transparent;border:0;
+  accent-color:var(--amber);cursor:pointer;box-shadow:none;
+}
+.sim-bright input[type="range"]:focus{box-shadow:none}
+.sim-bright input[type="range"]:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.sim-pricing{
+  border-left:1px solid var(--line-soft);padding-left:26px;
+  display:flex;flex-direction:column;
+}
+.sim-pricing-title{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;color:var(--paper);margin-bottom:12px;
+}
+.sim-pricing-list{list-style:none;display:grid;gap:10px}
+.sim-pricing-list li{
+  color:var(--muted);font-size:.97rem;line-height:1.55;
+  padding:12px 15px;border-radius:14px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line-soft);
+}
+.sim-pricing-list li[hidden]{display:none!important}
+.sim-pricing-list strong{color:var(--amber2);font-family:'Fraunces',serif;font-size:1.05rem}
+.sim-pricing-note{color:var(--dim);font-size:.85rem;margin-top:12px;margin-bottom:20px}
+.sim-cta{margin-top:auto;padding-top:20px;text-align:center}
+.sim-cta .btn, a.btn.sim-cta{display:inline-block}
+.sim-pricing .btn{margin-top:auto;align-self:flex-start}
+
+@media(max-width:900px){
+  .sim-panel{grid-template-columns:1fr}
+  .sim-pricing{border-left:0;border-top:1px solid var(--line-soft);padding-left:0;padding-top:22px}
+}
+@media(max-width:640px){
+  .sim-controls{grid-template-columns:1fr}
+  .sim-panel{padding:22px}
+  .sim-caption{font-size:.78rem}
+}
+@media (prefers-reduced-motion: reduce){
+  .sim-layer{transition:none}
+  .sim-twinkle .sim-bulb-core,.sim-twinkle .sim-bulb-halo{animation:none}
+}

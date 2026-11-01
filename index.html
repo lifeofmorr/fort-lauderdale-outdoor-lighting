@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cinematic.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Outdoor Lighting Quote Service — Fort Lauderdale & Broward County","serviceType":"Outdoor lighting installation referrals","areaServed":["Fort Lauderdale, FL","Wilton Manors, FL","Oakland Park, FL","Plantation, FL","Davie, FL","Weston, FL","Parkland, FL","Coral Springs, FL","Lighthouse Point, FL","Pompano Beach, FL","Hillsboro Beach, FL","Lauderdale-by-the-Sea, FL"],"provider":{"@type":"Organization","name":"Fort Lauderdale Outdoor Lighting"},"url":"https://lifeofmorr.github.io/fort-lauderdale-outdoor-lighting/"}
 </script>
@@ -26,38 +27,263 @@
 {"@type":"Question","name":"Do holiday installs include takedown?","acceptedAnswer":{"@type":"Answer","text":"Professional holiday packages typically include design, installation, in-season service, January takedown and storage — you never touch a ladder or a bin of tangled lights."}}]}
 </script>
 </head>
-<body>
-<header><div class="wrap nav">
-<a class="logo" href="index.html">Fort Lauderdale <span>Outdoor Lighting</span></a>
-<nav class="nav-links">
+<body class="cine">
+<header class="cine-nav"><div class="cine-nav-in">
+<a class="cine-logo" href="index.html">Fort Lauderdale <span>Outdoor Lighting</span></a>
+<nav aria-label="Main">
 <a href="permanent-roofline-lighting.html">Permanent Roofline</a>
 <a href="landscape-lighting.html">Landscape</a>
 <a href="holiday-lighting-installation.html">Holiday Installs</a>
-<a class="btn" href="get-a-quote.html">Get My Free Quote</a>
+<a class="cta" href="get-a-quote.html">Get My Free Quote</a>
 </nav></div></header>
-<div class="hero"><div class="wrap">
+<div class="cine-hero"><div class="wrap">
 <p class="eyebrow">Fort Lauderdale · Broward County</p>
 <h1>Your home, lit like the ones people <em>slow down for.</em></h1>
 <p class="lede">Permanent roofline lighting, landscape lighting and full-service holiday installs — designed and installed by licensed local pros. Free design consult, real local pricing.</p>
-<div class="hero-cta"><a class="btn" href="get-a-quote.html">Get My Free Quote</a><a class="btn ghost" href="#pricing">See Typical Pricing</a></div>
+<div class="hero-cta"><a class="cine-btn" href="get-a-quote.html">Get My Free Quote</a><a class="cine-btn ghost" href="#pricing">See Typical Pricing</a><a class="cine-btn ghost" href="#estimator">Instant Estimate</a></div>
 <div class="hero-points"><span><b>$2,000–$6,000</b> typical permanent system</span><span><b>~$4,000</b> average landscape project</span><span><b>Booking now</b> for the holiday season</span></div>
+<div class="scene" aria-hidden="true">
+  <div class="plx" data-depth="0.3"><div class="floor-grid"></div></div>
+  <div class="glow-orb"></div>
+  <div class="plx" data-depth="0.6"><div class="core"><div class="core-card">
+    <div class="cap">Permanent Roofline · App-Controlled</div>
+    <div class="big">Any color.<br>Any holiday.</div>
+    <p>Christmas red-and-green in December, Dolphins teal on Sundays, warm white every other night — in a discreet, color-matched track.</p>
+    <div class="dot-row"><i style="background:#ffe9bb;color:rgba(242,179,61,.85)"></i><i style="background:#ff5a4e;color:rgba(255,90,78,.7)"></i><i style="background:#35d05a;color:rgba(53,208,90,.7)"></i><i style="background:#7cc7ff;color:rgba(124,199,255,.8)"></i><i style="background:#ffd07a;color:rgba(255,208,122,.85)"></i></div>
+    <div class="reflect"></div>
+  </div></div></div>
+  <div class="plx" data-depth="1"><div class="glass g-price"><div class="g-cap">Typical permanent system</div><p>$2,000–$6,000 for most single-family homes</p><p>Average landscape project ~$4,000</p></div></div>
+  <div class="plx" data-depth="0.8"><div class="glass g-book"><div class="g-cap">Booking now</div><p>Holiday calendars fill by late November</p><p>Free design consult + quote</p></div></div>
+</div>
 <div class="hero-img"><img src="https://images.unsplash.com/photo-1784748651825-6975ce926dd5?fm=jpg&q=70&w=1600&auto=format&fit=crop" alt="Home exterior with warm outdoor lighting at night" loading="lazy"></div>
 </div></div>
 
+<section class="sim-section cine-sec dark-band" id="simulator" aria-labelledby="sim-heading">
+<div class="wrap">
+<p class="eyebrow">Interactive preview</p>
+<h2 id="sim-heading">See your home lit — before anyone climbs a ladder.</h2>
+<p class="sub">Flip the switches. Pick a color. This is the moment most homeowners fall for — watching their own roofline come alive at night.</p>
+
+<div class="sim-stage" id="simStage">
+<svg class="sim-svg" viewBox="0 0 900 520" role="img" aria-label="Illustrated night scene of a house front with switchable roofline lights, landscape uplights and glowing windows" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="simSky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#04060c"/><stop offset=".55" stop-color="#0a1220"/><stop offset="1" stop-color="#131c2b"/>
+</linearGradient>
+<linearGradient id="simUp" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0" stop-color="#ffbe55" stop-opacity=".55"/><stop offset=".6" stop-color="#ffbe55" stop-opacity=".18"/><stop offset="1" stop-color="#ffbe55" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="simUpPalm" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0" stop-color="#ffd07a" stop-opacity=".5"/><stop offset="1" stop-color="#ffd07a" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="simPool" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#ffbe55" stop-opacity=".5"/><stop offset="1" stop-color="#ffbe55" stop-opacity="0"/>
+</radialGradient>
+<filter id="simGlow" x="-90%" y="-90%" width="280%" height="280%">
+<feGaussianBlur stdDeviation="4.5" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="simSoft" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="10"/>
+</filter>
+</defs>
+
+<g class="sim-layer sim-layer-sky" data-depth="4">
+<rect x="-20" y="-20" width="940" height="560" fill="url(#simSky)"/>
+<circle cx="572" cy="15" r="1.3" fill="#fff" opacity="0.41"/><circle cx="134" cy="28" r="1" fill="#fff" opacity="0.63"/><circle cx="40" cy="27" r="1" fill="#fff" opacity="0.58"/><circle cx="35" cy="46" r="1.6" fill="#fff" opacity="0.39"/><circle cx="528" cy="156" r="1" fill="#fff" opacity="0.74"/><circle cx="152" cy="86" r="1.3" fill="#fff" opacity="0.35"/><circle cx="851" cy="71" r="1" fill="#fff" opacity="0.50"/><circle cx="326" cy="72" r="1.3" fill="#fff" opacity="0.77"/><circle cx="651" cy="107" r="1.6" fill="#fff" opacity="0.30"/><circle cx="269" cy="123" r="1.3" fill="#fff" opacity="0.63"/><circle cx="629" cy="18" r="1" fill="#fff" opacity="0.75"/><circle cx="875" cy="164" r="1" fill="#fff" opacity="0.50"/><circle cx="409" cy="160" r="1" fill="#fff" opacity="0.49"/><circle cx="196" cy="58" r="1" fill="#fff" opacity="0.65"/><circle cx="162" cy="141" r="1" fill="#fff" opacity="0.55"/><circle cx="248" cy="177" r="1" fill="#fff" opacity="0.69"/><circle cx="750" cy="150" r="1" fill="#fff" opacity="0.78"/><circle cx="717" cy="82" r="1" fill="#fff" opacity="0.39"/><circle cx="838" cy="168" r="1.3" fill="#fff" opacity="0.39"/><circle cx="449" cy="169" r="1.6" fill="#fff" opacity="0.34"/><circle cx="134" cy="144" r="1.3" fill="#fff" opacity="0.74"/><circle cx="387" cy="115" r="1.3" fill="#fff" opacity="0.39"/><circle cx="886" cy="102" r="1" fill="#fff" opacity="0.74"/><circle cx="766" cy="38" r="1" fill="#fff" opacity="0.76"/><circle cx="382" cy="21" r="1.6" fill="#fff" opacity="0.64"/><circle cx="422" cy="55" r="1" fill="#fff" opacity="0.69"/><circle cx="112" cy="169" r="1.3" fill="#fff" opacity="0.75"/><circle cx="310" cy="63" r="1" fill="#fff" opacity="0.54"/><circle cx="848" cy="168" r="1.3" fill="#fff" opacity="0.88"/><circle cx="679" cy="101" r="1" fill="#fff" opacity="0.82"/><circle cx="273" cy="125" r="1" fill="#fff" opacity="0.35"/><circle cx="680" cy="107" r="1" fill="#fff" opacity="0.64"/><circle cx="440" cy="30" r="1.3" fill="#fff" opacity="0.82"/><circle cx="741" cy="65" r="1" fill="#fff" opacity="0.41"/><circle cx="509" cy="24" r="1.6" fill="#fff" opacity="0.78"/><circle cx="869" cy="106" r="1" fill="#fff" opacity="0.33"/><circle cx="428" cy="109" r="1.3" fill="#fff" opacity="0.59"/><circle cx="543" cy="184" r="1" fill="#fff" opacity="0.71"/><circle cx="362" cy="131" r="1.3" fill="#fff" opacity="0.53"/><circle cx="465" cy="32" r="1" fill="#fff" opacity="0.29"/><circle cx="30" cy="110" r="1" fill="#fff" opacity="0.25"/><circle cx="632" cy="21" r="1" fill="#fff" opacity="0.84"/><circle cx="765" cy="23" r="1" fill="#fff" opacity="0.43"/><circle cx="437" cy="107" r="1.6" fill="#fff" opacity="0.41"/><circle cx="426" cy="83" r="1" fill="#fff" opacity="0.31"/><circle cx="390" cy="86" r="1.6" fill="#fff" opacity="0.81"/><circle cx="59" cy="128" r="1" fill="#fff" opacity="0.29"/><circle cx="650" cy="154" r="1" fill="#fff" opacity="0.41"/><circle cx="120" cy="54" r="1.4" fill="#ffd07a" opacity=".7"/><circle cx="742" cy="38" r="1.4" fill="#ffd07a" opacity=".7"/><circle cx="828" cy="96" r="1.4" fill="#ffd07a" opacity=".7"/><circle cx="64" cy="132" r="1.4" fill="#ffd07a" opacity=".7"/><circle cx="512" cy="30" r="1.4" fill="#ffd07a" opacity=".7"/>
+<circle cx="792" cy="62" r="24" fill="#f4ead0" opacity=".92"/>
+<circle cx="792" cy="62" r="40" fill="#f4ead0" opacity=".10" filter="url(#simSoft)"/>
+<circle cx="782" cy="54" r="5" fill="#d9cfae" opacity=".5"/><circle cx="802" cy="72" r="3.5" fill="#d9cfae" opacity=".4"/>
+</g>
+
+<g class="sim-layer sim-layer-glow" data-depth="12">
+<!-- landscape uplight cones (toggled) -->
+<g class="sim-uplights" id="simUplights" opacity="0">
+<polygon points="292,452 254,292 330,292" fill="url(#simUp)"/>
+<polygon points="408,452 372,300 444,300" fill="url(#simUp)"/>
+<polygon points="540,452 504,300 576,300" fill="url(#simUp)"/>
+<polygon points="612,452 580,318 644,318" fill="url(#simUp)"/>
+<polygon points="724,452 700,330 748,330" fill="url(#simUpPalm)"/>
+<ellipse cx="292" cy="452" rx="46" ry="10" fill="url(#simPool)"/>
+<ellipse cx="408" cy="452" rx="42" ry="9" fill="url(#simPool)"/>
+<ellipse cx="540" cy="452" rx="42" ry="9" fill="url(#simPool)"/>
+<ellipse cx="612" cy="452" rx="36" ry="8" fill="url(#simPool)"/>
+<ellipse cx="724" cy="452" rx="34" ry="8" fill="url(#simPool)"/>
+</g>
+<!-- window glow (toggled) -->
+<g class="sim-windows-glow" id="simWindowsGlow" opacity="0">
+<rect x="294" y="326" width="52" height="62" rx="4" fill="#ffca7a" filter="url(#simGlow)"/>
+<rect x="554" y="326" width="52" height="62" rx="4" fill="#ffca7a" filter="url(#simGlow)"/>
+<rect x="424" y="318" width="52" height="44" rx="4" fill="#ffd68f" filter="url(#simGlow)"/>
+<rect x="431" y="376" width="38" height="74" rx="4" fill="#ffbe55" opacity=".85" filter="url(#simGlow)"/>
+</g>
+<!-- roofline halo (toggled) -->
+<g class="sim-roof-halo" id="simRoofHalo" opacity=".38" filter="url(#simGlow)"><circle class="sim-bulb-halo" data-i="0" cx="257.5" cy="284.1" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="1" cx="268.5" cy="278.3" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="2" cx="279.5" cy="272.6" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="3" cx="290.5" cy="266.8" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="4" cx="301.5" cy="261.0" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="5" cx="312.5" cy="255.2" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="6" cx="323.5" cy="249.4" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="7" cx="334.5" cy="243.7" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="8" cx="345.5" cy="237.9" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="9" cx="356.5" cy="232.1" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="10" cx="367.5" cy="226.3" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="11" cx="378.5" cy="220.6" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="12" cx="389.5" cy="214.8" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="13" cx="400.5" cy="209.0" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="14" cx="411.5" cy="203.2" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="15" cx="422.5" cy="197.4" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="16" cx="433.5" cy="191.7" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="17" cx="444.5" cy="185.9" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="18" cx="455.5" cy="185.9" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="19" cx="466.5" cy="191.7" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="20" cx="477.5" cy="197.4" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="21" cx="488.5" cy="203.2" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="22" cx="499.5" cy="209.0" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="23" cx="510.5" cy="214.8" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="24" cx="521.5" cy="220.6" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="25" cx="532.5" cy="226.3" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="26" cx="543.5" cy="232.1" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="27" cx="554.5" cy="237.9" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="28" cx="565.5" cy="243.7" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="29" cx="576.5" cy="249.4" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="30" cx="587.5" cy="255.2" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="31" cx="598.5" cy="261.0" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="32" cx="609.5" cy="266.8" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="33" cx="620.5" cy="272.6" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="34" cx="631.5" cy="278.3" r="11" fill="#f2b33d"/><circle class="sim-bulb-halo" data-i="35" cx="642.5" cy="284.1" r="11" fill="#f2b33d"/></g>
+</g>
+
+<g class="sim-layer sim-layer-house" data-depth="8">
+<!-- lawn -->
+<rect x="-20" y="450" width="940" height="90" fill="#060a08"/>
+<rect x="-20" y="450" width="940" height="4" fill="#0d1510"/>
+<polygon points="424,520 476,520 462,450 438,450" fill="#11161d"/>
+<!-- palm tree (right) -->
+<g stroke="#05080c" fill="none" stroke-linecap="round">
+<path d="M724,452 C718,410 716,382 724,344" stroke-width="11"/>
+<path d="M724,344 C700,324 672,318 648,326" stroke-width="7"/>
+<path d="M724,344 C716,318 696,302 672,298" stroke-width="6"/>
+<path d="M724,344 C734,318 756,302 782,300" stroke-width="6"/>
+<path d="M724,344 C748,326 776,322 798,332" stroke-width="7"/>
+<path d="M724,344 C724,320 734,300 752,288" stroke-width="5"/>
+</g>
+<!-- side shrub palm (left) -->
+<g stroke="#05080c" fill="none" stroke-linecap="round">
+<path d="M182,452 C184,432 186,420 182,404" stroke-width="8"/>
+<path d="M182,404 C166,392 148,390 134,396" stroke-width="5"/>
+<path d="M182,404 C190,388 204,380 220,380" stroke-width="5"/>
+<path d="M182,404 C198,394 214,394 226,402" stroke-width="5"/>
+</g>
+<!-- house body -->
+<rect x="262" y="282" width="376" height="170" fill="#0a0f16"/>
+<rect x="262" y="282" width="376" height="170" fill="none" stroke="rgba(255,255,255,.06)"/>
+<!-- roof (thick silhouette) -->
+<polygon points="238,290 450,168 662,290 636,290 450,192 264,290" fill="#05080d"/>
+<polygon points="238,290 450,168 662,290 650,296 450,182 250,296" fill="#0d131b"/>
+<!-- fascia line the bulbs sit on -->
+<polyline points="252,287 450,183 648,287" fill="none" stroke="#1a2431" stroke-width="3"/>
+<!-- windows (dark base) -->
+<rect x="294" y="326" width="52" height="62" rx="4" fill="#131a24" stroke="rgba(255,255,255,.08)"/>
+<line x1="320" y1="326" x2="320" y2="388" stroke="rgba(255,255,255,.08)"/>
+<rect x="554" y="326" width="52" height="62" rx="4" fill="#131a24" stroke="rgba(255,255,255,.08)"/>
+<line x1="580" y1="326" x2="580" y2="388" stroke="rgba(255,255,255,.08)"/>
+<rect x="424" y="318" width="52" height="44" rx="4" fill="#131a24" stroke="rgba(255,255,255,.08)"/>
+<!-- door -->
+<rect x="431" y="376" width="38" height="76" rx="4" fill="#0d141d" stroke="rgba(255,255,255,.09)"/>
+<circle cx="462" cy="416" r="2.6" fill="#8b8f98"/>
+<!-- shrubs -->
+<ellipse cx="286" cy="446" rx="42" ry="16" fill="#050a07"/>
+<ellipse cx="618" cy="446" rx="46" ry="17" fill="#050a07"/>
+<ellipse cx="382" cy="450" rx="30" ry="11" fill="#040805"/>
+<ellipse cx="520" cy="450" rx="30" ry="11" fill="#040805"/>
+<!-- uplight fixtures -->
+<g fill="#1c2531" stroke="rgba(255,255,255,.12)">
+<rect x="286" y="444" width="12" height="9" rx="2"/><rect x="402" y="444" width="12" height="9" rx="2"/>
+<rect x="534" y="444" width="12" height="9" rx="2"/><rect x="606" y="444" width="12" height="9" rx="2"/>
+<rect x="718" y="444" width="12" height="9" rx="2"/>
+</g>
+</g>
+
+<g class="sim-layer sim-layer-bulbs" data-depth="12">
+<g class="sim-roof-core" id="simRoofCore"><circle class="sim-bulb-core" data-i="0" cx="257.5" cy="284.1" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="1" cx="268.5" cy="278.3" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="2" cx="279.5" cy="272.6" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="3" cx="290.5" cy="266.8" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="4" cx="301.5" cy="261.0" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="5" cx="312.5" cy="255.2" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="6" cx="323.5" cy="249.4" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="7" cx="334.5" cy="243.7" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="8" cx="345.5" cy="237.9" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="9" cx="356.5" cy="232.1" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="10" cx="367.5" cy="226.3" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="11" cx="378.5" cy="220.6" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="12" cx="389.5" cy="214.8" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="13" cx="400.5" cy="209.0" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="14" cx="411.5" cy="203.2" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="15" cx="422.5" cy="197.4" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="16" cx="433.5" cy="191.7" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="17" cx="444.5" cy="185.9" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="18" cx="455.5" cy="185.9" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="19" cx="466.5" cy="191.7" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="20" cx="477.5" cy="197.4" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="21" cx="488.5" cy="203.2" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="22" cx="499.5" cy="209.0" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="23" cx="510.5" cy="214.8" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="24" cx="521.5" cy="220.6" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="25" cx="532.5" cy="226.3" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="26" cx="543.5" cy="232.1" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="27" cx="554.5" cy="237.9" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="28" cx="565.5" cy="243.7" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="29" cx="576.5" cy="249.4" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="30" cx="587.5" cy="255.2" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="31" cx="598.5" cy="261.0" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="32" cx="609.5" cy="266.8" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="33" cx="620.5" cy="272.6" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="34" cx="631.5" cy="278.3" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/><circle class="sim-bulb-core" data-i="35" cx="642.5" cy="284.1" r="4.1" fill="#ffe9bb" stroke="#fff6dd" stroke-width=".7"/></g>
+</g>
+</svg>
+<p class="sim-caption">Illustration — your design consultation includes a custom rendering for your home.</p>
+</div>
+
+<div class="sim-panel" role="group" aria-label="Lighting scene controls">
+<div class="sim-controls">
+<fieldset class="sim-fieldset">
+<legend>Roofline lights</legend>
+<label class="sim-switch">
+<input type="checkbox" id="simRoofToggle" checked>
+<span class="sim-track" aria-hidden="true"><span class="sim-thumb"></span></span>
+<span class="sim-switch-label">Roofline lights</span>
+</label>
+<div class="sim-themes" role="radiogroup" aria-label="Roofline color theme">
+<label class="sim-theme"><input type="radio" name="simTheme" value="warm" checked><span class="sim-swatch sim-swatch-warm" aria-hidden="true"></span>Warm White</label>
+<label class="sim-theme"><input type="radio" name="simTheme" value="multi"><span class="sim-swatch sim-swatch-multi" aria-hidden="true"></span>Multi-Color</label>
+<label class="sim-theme"><input type="radio" name="simTheme" value="redgreen"><span class="sim-swatch sim-swatch-rg" aria-hidden="true"></span>Red &amp; Green</label>
+<label class="sim-theme"><input type="radio" name="simTheme" value="ice"><span class="sim-swatch sim-swatch-ice" aria-hidden="true"></span>Ice Blue</label>
+</div>
+</fieldset>
+
+<fieldset class="sim-fieldset">
+<legend>Scene layers</legend>
+<label class="sim-switch">
+<input type="checkbox" id="simLandscapeToggle">
+<span class="sim-track" aria-hidden="true"><span class="sim-thumb"></span></span>
+<span class="sim-switch-label">Landscape uplights</span>
+</label>
+<label class="sim-switch">
+<input type="checkbox" id="simWindowsToggle">
+<span class="sim-track" aria-hidden="true"><span class="sim-thumb"></span></span>
+<span class="sim-switch-label">Window glow</span>
+</label>
+<div class="sim-bright">
+<label for="simBrightness">Brightness <output id="simBrightnessOut" for="simBrightness">90%</output></label>
+<input type="range" id="simBrightness" min="20" max="100" step="5" value="90" aria-describedby="simBrightnessOut">
+</div>
+</fieldset>
+</div>
+
+<div class="sim-pricing" aria-live="polite">
+<p class="sim-pricing-title">What this setup typically runs</p>
+<ul class="sim-pricing-list" id="simPricingList">
+<li data-line="roofline">Permanent roofline lighting — typically <strong>$2,000–$6,000</strong> for most single-family homes.</li>
+<li data-line="landscape" hidden>Landscape lighting — <strong>~$4,000</strong> average project.</li>
+<li data-line="holiday">Holiday installation, for comparison — typically <strong>$1,500–$4,500</strong> per season.</li>
+<li data-line="empty" hidden>Toggle a layer on above to see what that setup typically runs.</li>
+</ul>
+<p class="sim-pricing-note">Typical local ranges only — your free consult prices your exact home.</p>
+<a class="btn sim-cta" id="simCta" href="get-a-quote.html?need=Permanent%20roofline%20lighting">Get My Free Quote</a>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="cine-sec dark-band" id="estimator"><div class="wrap">
+<h2 class="sec-title rv">Instant lighting estimator</h2>
+<p class="lead-c rv">Built only from the published prices on this site. Pick a service, size it to your home — your exact quote is still free.</p>
+<div class="estimator rv" data-widget="lighting-estimator">
+  <div class="est-types" role="group" aria-label="Lighting service">
+    <button type="button" class="est-type" data-esvc="permanent" aria-pressed="true">Permanent roofline<small>Published: $2,000–$6,000</small></button>
+    <button type="button" class="est-type" data-esvc="landscape" aria-pressed="false">Landscape<small>Published: ~$4,000 average</small></button>
+    <button type="button" class="est-type" data-esvc="holiday" aria-pressed="false">Holiday install<small>Published: $1,500–$4,500</small></button>
+  </div>
+  <div class="est-grid">
+    <div class="est-field">
+      <label for="est-size">Home size / roofline</label>
+      <select id="est-size">
+        <option value="Single story" selected>Single story</option>
+        <option value="Two story">Two story</option>
+        <option value="Large / estate home">Large / estate home</option>
+      </select>
+    </div>
+    <div class="est-field est-zones" id="est-zones-wrap" hidden>
+      <label for="est-zones">Landscape zones</label>
+      <select id="est-zones">
+        <option value="1">Front elevation only</option>
+        <option value="2" selected>Front + palms &amp; paths</option>
+        <option value="3">Front, palms, paths + pool</option>
+        <option value="4">Full property — estate scope</option>
+      </select>
+    </div>
+  </div>
+  <div class="est-out" aria-live="polite">
+    <div class="est-range" id="est-range">$2,000–$4,000</div>
+    <p class="est-rec" id="est-rec"></p>
+    <p class="est-note" id="est-note"></p>
+    <div class="est-cta"><a class="cine-btn" id="est-cta" href="get-a-quote.html">Get My Free Quote</a></div>
+  </div>
+  <p class="est-note" style="margin-top:14px">Estimate only — not a bid. Typical local ranges only; your free consult prices your exact home.</p>
+</div>
+</div></section>
+
 <section><div class="wrap">
-<h2>Three ways Broward lights up</h2>
-<p class="sub">One crew visit can change how your home feels every single night of the year — the holidays are just the loudest month.</p>
+<h2 class="sec-title rv">Three ways Broward lights up</h2>
+<p class="sub lead-c rv">One crew visit can change how your home feels every single night of the year — the holidays are just the loudest month.</p>
 <div class="cards">
-<div class="card"><h3>Permanent Roofline Lighting</h3><p>App-controlled LED in a discreet, color-matched track. Christmas red-and-green in December, Dolphins teal on Sundays, warm white every other night — forever, with no ladder.</p><span class="price">Typical home: $2,000–$6,000</span><a class="more" href="permanent-roofline-lighting.html">Permanent roofline details →</a></div>
-<div class="card"><h3>Landscape Lighting</h3><p>Designed low-voltage lighting for palms, paths, pools and architecture. The single biggest curb-appeal upgrade a South Florida home can make — and a real security upgrade too.</p><span class="price">Average project: ~$4,000</span><a class="more" href="landscape-lighting.html">Landscape details →</a></div>
-<div class="card"><h3>Holiday Light Installation</h3><p>Design, install, service, takedown and storage — the full concierge version of Christmas lights. Calendars fill by late November, so this is the season's fast-moving one.</p><span class="price">Typical home: $1,500–$4,500</span><a class="more" href="holiday-lighting-installation.html">Holiday install details →</a></div>
+<div class="card rv tilt"><h3>Permanent Roofline Lighting</h3><p>App-controlled LED in a discreet, color-matched track. Christmas red-and-green in December, Dolphins teal on Sundays, warm white every other night — forever, with no ladder.</p><span class="price">Typical home: $2,000–$6,000</span><a class="more" href="permanent-roofline-lighting.html">Permanent roofline details →</a></div>
+<div class="card rv tilt"><h3>Landscape Lighting</h3><p>Designed low-voltage lighting for palms, paths, pools and architecture. The single biggest curb-appeal upgrade a South Florida home can make — and a real security upgrade too.</p><span class="price">Average project: ~$4,000</span><a class="more" href="landscape-lighting.html">Landscape details →</a></div>
+<div class="card rv tilt"><h3>Holiday Light Installation</h3><p>Design, install, service, takedown and storage — the full concierge version of Christmas lights. Calendars fill by late November, so this is the season's fast-moving one.</p><span class="price">Typical home: $1,500–$4,500</span><a class="more" href="holiday-lighting-installation.html">Holiday install details →</a></div>
 </div>
 </div></section>
 
 <section id="pricing"><div class="wrap">
-<h2>Typical outdoor lighting prices in Broward</h2>
-<p class="sub">Honest ranges from real local project pricing. Roofline length, stories, and fixture counts move the number — the free consult nails it down exactly.</p>
-<table>
+<h2 class="sec-title rv">Typical outdoor lighting prices in Broward</h2>
+<p class="sub lead-c rv">Honest ranges from real local project pricing. Roofline length, stories, and fixture counts move the number — the free consult nails it down exactly.</p>
+<table class="rv">
 <tr><th>Project</th><th>Scope</th><th>Typical range</th></tr>
 <tr><td>Permanent roofline lighting</td><td>Most single-family homes</td><td>$2,000–$6,000</td></tr>
 <tr><td>Landscape lighting design + install</td><td>Average project</td><td>~$4,000 average</td></tr>
@@ -67,32 +293,32 @@
 </div></section>
 
 <section><div class="wrap">
-<h2>How it works</h2>
-<p class="sub">From form to first glow in three steps.</p>
+<h2 class="sec-title rv">How it works</h2>
+<p class="sub lead-c rv">From form to first glow in three steps.</p>
 <div class="steps">
-<div class="step"><span class="n">1</span><h3>Tell us about your home</h3><p>City, what you're picturing, and when you want it lit. Two minutes on the quote form.</p></div>
-<div class="step"><span class="n">2</span><h3>Free design consult + quote</h3><p>A licensed local installer designs the look with you and gives you a real price — no obligation.</p></div>
-<div class="step"><span class="n">3</span><h3>Installed, app-ready</h3><p>Most permanent and landscape installs finish in a day. You control everything from your phone.</p></div>
+<div class="step rv"><span class="n">1</span><h3>Tell us about your home</h3><p>City, what you're picturing, and when you want it lit. Two minutes on the quote form.</p></div>
+<div class="step rv"><span class="n">2</span><h3>Free design consult + quote</h3><p>A licensed local installer designs the look with you and gives you a real price — no obligation.</p></div>
+<div class="step rv"><span class="n">3</span><h3>Installed, app-ready</h3><p>Most permanent and landscape installs finish in a day. You control everything from your phone.</p></div>
 </div>
 </div></section>
 
 <section><div class="wrap">
-<h2>Areas we cover</h2>
-<p class="sub">Fort Lauderdale and greater Broward County.</p>
-<div class="chips"><span class="chip">Fort Lauderdale</span><span class="chip">Las Olas Isles</span><span class="chip">Coral Ridge</span><span class="chip">Victoria Park</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-wilton-manors.html">Wilton Manors</a><span class="chip">Oakland Park</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-plantation.html">Plantation</a><span class="chip">Davie</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-weston.html">Weston</a><span class="chip">Parkland</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-coral-springs.html">Coral Springs</a><span class="chip">Lighthouse Point</span><span class="chip">Pompano Beach</span><span class="chip">Hillsboro Beach</span><span class="chip">Lauderdale-by-the-Sea</span></div>
+<h2 class="sec-title rv">Areas we cover</h2>
+<p class="sub lead-c rv">Fort Lauderdale and greater Broward County.</p>
+<div class="chips rv"><span class="chip">Fort Lauderdale</span><span class="chip">Las Olas Isles</span><span class="chip">Coral Ridge</span><span class="chip">Victoria Park</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-wilton-manors.html">Wilton Manors</a><span class="chip">Oakland Park</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-plantation.html">Plantation</a><span class="chip">Davie</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-weston.html">Weston</a><span class="chip">Parkland</span><a class="chip" style="text-decoration:none;color:var(--muted)" href="outdoor-lighting-coral-springs.html">Coral Springs</a><span class="chip">Lighthouse Point</span><span class="chip">Pompano Beach</span><span class="chip">Hillsboro Beach</span><span class="chip">Lauderdale-by-the-Sea</span></div>
 </div></section>
 
 <section class="faq"><div class="wrap">
-<h2>Questions, answered straight</h2>
+<h2 class="sec-title rv">Questions, answered straight</h2>
 <p class="sub"></p>
-<details><summary>How much does permanent roofline lighting cost?</summary><p>Most Broward single-family homes run $2,000–$6,000 installed, by roofline length and stories. The free consult prices your exact roofline.</p></details>
-<details><summary>When should I book holiday installation?</summary><p>Now, honestly. Broward installers' December calendars typically fill by mid-to-late November — early bookings get the design and dates they want.</p></details>
-<details><summary>Are permanent lights HOA-friendly?</summary><p>Usually. The color-matched track is nearly invisible by day, and many HOAs treat it as architectural lighting. Your installer can confirm your community's rules.</p></details>
-<details><summary>What does landscape lighting cost?</summary><p>The average local project is around $4,000, from starter designs below that to full estate and waterfront designs above it.</p></details>
-<details><summary>Do holiday packages include takedown?</summary><p>Yes — design, install, in-season service, January takedown and storage are typically all in the package.</p></details>
+<details class="rv"><summary>How much does permanent roofline lighting cost?</summary><p>Most Broward single-family homes run $2,000–$6,000 installed, by roofline length and stories. The free consult prices your exact roofline.</p></details>
+<details class="rv"><summary>When should I book holiday installation?</summary><p>Now, honestly. Broward installers' December calendars typically fill by mid-to-late November — early bookings get the design and dates they want.</p></details>
+<details class="rv"><summary>Are permanent lights HOA-friendly?</summary><p>Usually. The color-matched track is nearly invisible by day, and many HOAs treat it as architectural lighting. Your installer can confirm your community's rules.</p></details>
+<details class="rv"><summary>What does landscape lighting cost?</summary><p>The average local project is around $4,000, from starter designs below that to full estate and waterfront designs above it.</p></details>
+<details class="rv"><summary>Do holiday packages include takedown?</summary><p>Yes — design, install, in-season service, January takedown and storage are typically all in the package.</p></details>
 </div></section>
 
-<section><div class="wrap"><div class="cta-band">
+<section><div class="wrap"><div class="cta-band rv">
 <div><h2 style="margin-bottom:6px">Get the real number for your home.</h2><p style="color:var(--muted)">Free design consult and quote from a licensed local installer. No obligation.</p></div>
 <a class="btn" href="get-a-quote.html">Get My Free Quote</a>
 </div></div></section>
@@ -105,29 +331,159 @@
 <p class="disclosure">Fort Lauderdale Outdoor Lighting is a referral and marketing service that connects Broward County homeowners with independent, licensed outdoor lighting installers. We are not a lighting contractor and do not perform installations. Quotes are provided by the installer who contacts you; pricing ranges shown are typical market ranges, not a bid. Always verify an installer's Florida license and insurance before hiring.</p>
 <p style="margin-top:14px">© 2026 Fort Lauderdale Outdoor Lighting. All rights reserved.</p>
 </div></footer>
+<script src="cinematic.js"></script>
+
 <script>
-/* Cinematic reveal + card tilt — vanilla, progressive enhancement.
-   Elements are only hidden once JS runs; reduced-motion opts out. */
+/* "See Your Home Lit" simulator — vanilla, progressive enhancement.
+   No-JS: scene renders statically with warm-white roofline lit and CTA visible.
+   Reduced motion / touch: no parallax, no twinkle. */
 (function(){
+  var stage = document.getElementById('simStage');
+  if(!stage) return;
+  var roofToggle = document.getElementById('simRoofToggle');
+  var landToggle = document.getElementById('simLandscapeToggle');
+  var winToggle  = document.getElementById('simWindowsToggle');
+  var bright     = document.getElementById('simBrightness');
+  var brightOut  = document.getElementById('simBrightnessOut');
+  var halo = document.getElementById('simRoofHalo');
+  var core = document.getElementById('simRoofCore');
+  var uplights = document.getElementById('simUplights');
+  var windowsGlow = document.getElementById('simWindowsGlow');
+  var cta = document.getElementById('simCta');
+  var pricingList = document.getElementById('simPricingList');
+  var cores = core ? core.querySelectorAll('.sim-bulb-core') : [];
+  var halos = halo ? halo.querySelectorAll('.sim-bulb-halo') : [];
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var targets = document.querySelectorAll('section .wrap > *, .hero .wrap > *, footer .wrap > *, .card, .step, .cta-band');
-  if('IntersectionObserver' in window && !reduce){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
-    targets.forEach(function(el){ el.classList.add('rv'); io.observe(el); });
+
+  var THEMES = {
+    warm:     { core:'#ffe9bb', halo:'#f2b33d', seq:null },
+    multi:    { core:null, halo:null, seq:['#ff5a4e','#ffd23e','#4ade80','#4db8ff','#c084fc'] },
+    redgreen: { core:null, halo:null, seq:['#ff4040','#35d05a'] },
+    ice:      { core:'#dff3ff', halo:'#7cc7ff', seq:null }
+  };
+  function currentTheme(){
+    var r = document.querySelector('input[name="simTheme"]:checked');
+    return r ? r.value : 'warm';
   }
+  function applyTheme(){
+    var name = currentTheme();
+    var t = THEMES[name] || THEMES.warm;
+    for(var i=0;i<cores.length;i++){
+      var c = t.seq ? t.seq[i % t.seq.length] : t.core;
+      var h = t.seq ? t.seq[i % t.seq.length] : t.halo;
+      cores[i].setAttribute('fill', c);
+      if(halos[i]) halos[i].setAttribute('fill', h);
+      cores[i].style.animationDelay = (i * 0.12) + 's';
+      if(halos[i]) halos[i].style.animationDelay = (i * 0.12) + 's';
+    }
+    var twinkle = (name === 'multi' || name === 'redgreen') && !reduce;
+    if(core) core.classList.toggle('sim-twinkle', twinkle);
+    if(halo) halo.classList.toggle('sim-twinkle', twinkle);
+  }
+  function brightnessFactor(){ return (parseInt(bright.value,10) || 90) / 100; }
+  function render(){
+    var b = brightnessFactor();
+    var roofOn = roofToggle.checked;
+    var landOn = landToggle.checked;
+    var winOn = winToggle.checked;
+    if(halo) halo.setAttribute('opacity', roofOn ? (0.38 * b).toFixed(3) : '0');
+    if(core) core.setAttribute('opacity', roofOn ? Math.min(1, 0.35 + 0.65 * b).toFixed(3) : '0');
+    if(uplights) uplights.setAttribute('opacity', landOn ? (0.95 * b).toFixed(3) : '0');
+    if(windowsGlow) windowsGlow.setAttribute('opacity', winOn ? (0.95 * b).toFixed(3) : '0');
+    if(brightOut) brightOut.textContent = bright.value + '%';
+    // theme radios only matter when roofline is on
+    document.querySelectorAll('input[name="simTheme"]').forEach(function(r){ r.disabled = !roofOn; });
+    // pricing lines — honest published ranges, separate lines, no total
+    if(pricingList){
+      pricingList.querySelectorAll('li').forEach(function(li){
+        var k = li.getAttribute('data-line');
+        if(k === 'roofline') li.hidden = !roofOn;
+        else if(k === 'landscape') li.hidden = !landOn;
+        else if(k === 'holiday') li.hidden = false;
+        else if(k === 'empty') li.hidden = (roofOn || landOn);
+      });
+    }
+    // CTA pre-select: roofline primary, else landscape, else plain
+    if(cta){
+      if(roofOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Permanent roofline lighting');
+      else if(landOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Landscape lighting');
+      else cta.href = 'get-a-quote.html';
+    }
+    applyTheme();
+  }
+  [roofToggle, landToggle, winToggle].forEach(function(el){ if(el) el.addEventListener('change', render); });
+  document.querySelectorAll('input[name="simTheme"]').forEach(function(r){ r.addEventListener('change', render); });
+  if(bright) bright.addEventListener('input', render);
+
+  /* Subtle parallax — pointer-fine only, never reduced motion / touch */
   if(!reduce && window.matchMedia('(pointer: fine)').matches){
-    document.querySelectorAll('.card').forEach(function(card){
-      card.addEventListener('pointermove', function(ev){
-        var r = card.getBoundingClientRect();
+    var layers = stage.querySelectorAll('.sim-layer');
+    var raf = null;
+    stage.addEventListener('pointermove', function(ev){
+      if(raf) return;
+      raf = requestAnimationFrame(function(){
+        raf = null;
+        var r = stage.getBoundingClientRect();
         var x = (ev.clientX - r.left) / r.width - .5;
         var y = (ev.clientY - r.top) / r.height - .5;
-        card.style.transform = 'translateY(-7px) rotateX(' + (-y*4.5).toFixed(2) + 'deg) rotateY(' + (x*4.5).toFixed(2) + 'deg)';
+        layers.forEach(function(layer){
+          var d = parseFloat(layer.getAttribute('data-depth')) || 6;
+          layer.style.transform = 'translate(' + (-x * d).toFixed(1) + 'px,' + (-y * d * .55).toFixed(1) + 'px)';
+        });
       });
-      card.addEventListener('pointerleave', function(){ card.style.transform = ''; });
+    });
+    stage.addEventListener('pointerleave', function(){
+      layers.forEach(function(layer){ layer.style.transform = ''; });
     });
   }
+  render();
+})();
+</script>
+
+<script>
+/* Lighting project estimator — math uses ONLY this site's published prices:
+   permanent roofline $2,000–$6,000 (most single-family homes; two-story and
+   waterfront homes at the top of the range and above); landscape ~$4,000
+   average (starter designs below, estate/waterfront above); holiday
+   $1,500–$4,500 per season. Sub-ranges position the home within the
+   published range by size — no invented prices. */
+(function(){
+var svc='permanent';
+var sizeSel=document.getElementById('est-size'), zoneSel=document.getElementById('est-zones'),
+    zoneWrap=document.getElementById('est-zones-wrap'),
+    rg=document.getElementById('est-range'), rec=document.getElementById('est-rec'),
+    nt=document.getElementById('est-note'), cta=document.getElementById('est-cta');
+if(!sizeSel||!rg) return;
+var NEED={permanent:'Permanent roofline lighting',landscape:'Landscape lighting',holiday:'Holiday lighting installation'};
+function update(){
+  var size=sizeSel.value, zones=parseInt(zoneSel.value,10)||2, range, note, scope;
+  zoneWrap.hidden = (svc!=='landscape');
+  if(svc==='permanent'){
+    if(size==='Single story'){ range='$2,000–$4,000'; note='Lower half of the published $2,000–$6,000 typical range — a one-story roofline sits at the shorter end.'; }
+    else if(size==='Two story'){ range='$3,500–$6,000'; note='Upper half of the published $2,000–$6,000 typical range — two-story rooflines sit at the top of the range.'; }
+    else { range='$6,000 and up'; note='Published pricing puts two-story and waterfront homes at the top of the $2,000–$6,000 range and above — estate rooflines are priced by the free consult.'; }
+    scope='Permanent roofline lighting for a '+size.toLowerCase()+' — app-controlled LED in a discreet, color-matched track.';
+  } else if(svc==='landscape'){
+    if(zones<=1){ range='Below the ~$4,000 average'; note='Published pricing: focused starter designs (front elevation) begin below the ~$4,000 average project.'; }
+    else if(zones<=3){ range='~$4,000 average project'; note='Published pricing: the average professionally designed landscape project in the area is around $4,000.'; }
+    else { range='Above the ~$4,000 average'; note='Published pricing: large waterfront and estate properties run above the ~$4,000 average project.'; }
+    scope='Landscape lighting covering '+zoneSel.options[zoneSel.selectedIndex].text.toLowerCase()+' for a '+size.toLowerCase()+'.';
+  } else {
+    if(size==='Single story'){ range='$1,500–$3,000'; note='Lower half of the published $1,500–$4,500 per-season range for a typical home.'; }
+    else if(size==='Two story'){ range='$2,500–$4,500'; note='Upper half of the published $1,500–$4,500 per-season range — stories and roofline move the number.'; }
+    else { range='$4,500 and up'; note='Published range is $1,500–$4,500 for a typical home; estate rooflines and extras like trees and wreaths run above it.'; }
+    scope='Holiday lighting installation for a '+size.toLowerCase()+' — design, install, in-season service, January takedown and storage.';
+  }
+  rg.textContent=range;
+  rec.textContent='Recommended scope: '+scope;
+  nt.textContent=note+' The free consult nails it down exactly.';
+  var summary='Estimator: '+NEED[svc]+' · '+size+' · estimated '+range+'. '+scope;
+  cta.href='get-a-quote.html?need='+encodeURIComponent(NEED[svc])+'&size='+encodeURIComponent(size)+'&summary='+encodeURIComponent(summary);
+}
+document.querySelectorAll('.est-type').forEach(function(b){b.addEventListener('click',function(){svc=b.getAttribute('data-esvc');document.querySelectorAll('.est-type').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});update();});});
+sizeSel.addEventListener('change',update);
+zoneSel.addEventListener('change',update);
+update();
 })();
 </script>
 </body>
