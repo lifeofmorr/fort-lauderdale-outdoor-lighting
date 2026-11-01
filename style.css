@@ -282,3 +282,18 @@ footer .logo{display:inline-block}
   .rv{opacity:1;transform:none}
   .card:hover,.step:hover,.btn:hover{transform:none}
 }
+
+/* Native quote form (posts to the site's Google backend invisibly) */
+.gform{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+.gf-field{display:flex;flex-direction:column;gap:8px}
+.gf-wide{grid-column:1/-1}
+.gf-field label{font-weight:600;font-size:.95rem;color:#e8ddc4}
+.gf-star{color:#f2b33d}
+.gform input,.gform select,.gform textarea{font:inherit;font-size:1rem;color:#f7f2e7;background:rgba(255,255,255,.05);border:1px solid rgba(242,179,61,.28);border-radius:14px;padding:14px 16px;width:100%;appearance:none;-webkit-appearance:none;transition:border-color .2s, box-shadow .2s}
+.gform select{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
+.gform input:focus,.gform select:focus,.gform textarea:focus{outline:none;border-color:#f2b33d;box-shadow:0 0 0 4px rgba(242,179,61,.16)}
+.gform textarea{resize:vertical;min-height:110px}
+.gform-btn{font:inherit;font-weight:700;font-size:1.05rem;color:BTN#f7f2e7;background:linear-gradient(180deg,#ffd07a,#f2b33d);border:0;border-radius:999px;padding:16px 34px;min-height:56px;cursor:pointer;box-shadow:0 12px 28px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.35);transition:transform .18s, box-shadow .18s}
+.gform-btn:hover{transform:translateY(-2px)}
+.gform-btn:active{transform:translateY(0)}
+@media (max-width:640px){.gform{grid-template-columns:1fr}}
