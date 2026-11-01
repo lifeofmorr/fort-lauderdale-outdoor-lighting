@@ -75,3 +75,7 @@ footer a:hover{color:var(--paper)}
   radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.6px),
   linear-gradient(180deg,#11161d,#0d1117);
   background-size:auto,120px 46px,26px 26px,auto;background-position:0 0,0 0,0 0,0 0}
+
+/* Hero photo (added when a verified hero image is placed on index.html) */
+.hero-img{margin-top:36px}
+.hero-img img{display:block;width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line)}
