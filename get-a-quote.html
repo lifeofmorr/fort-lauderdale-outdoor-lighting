@@ -89,6 +89,11 @@
       var ta = document.querySelector('textarea[name="entry.2055155254"]');
       if(ta && !ta.value) ta.value = s.slice(0, 500);
     }
+    var n = q.get('notes');
+    if(n){
+      var ta2 = document.querySelector('textarea[name="entry.2055155254"]');
+      if(ta2 && !ta2.value) ta2.value = n.slice(0, 500);
+    }
   }catch(e){}
 })();
 </script>

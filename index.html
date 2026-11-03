@@ -405,7 +405,8 @@
     }
     // CTA pre-select: roofline primary, else landscape, else plain
     if(cta){
-      if(roofOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Permanent roofline lighting');
+      if(roofOn && landOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Permanent roofline lighting') + '&notes=' + encodeURIComponent('Also interested in: Landscape lighting (from the See Your Home Lit preview)');
+      else if(roofOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Permanent roofline lighting');
       else if(landOn) cta.href = 'get-a-quote.html?need=' + encodeURIComponent('Landscape lighting');
       else cta.href = 'get-a-quote.html';
     }
